@@ -12,7 +12,7 @@ st.set_page_config(page_title="NeuralRetail", layout="wide")
 # ================================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("cleaned_retail_data.csv")
+    pd.read_csv("cleaned_retail_small.csv")
     df['TotalPrice'] = df['Quantity'] * df['Price']
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
     return df
